@@ -1,132 +1,49 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Geçmiş Olsun Ecrin</title>
+  <meta charset="UTF-8">
+  <title>404 - Your Friend Not Found</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #fdfdfd, #e0f7fa);
+      background-color: #f8f8f8;
+      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    #startBtn {
-      padding: 16px 40px;
-      font-size: 1.3rem;
-      background-color: #48c9b0;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    #startBtn:hover {
-      background-color: #3ea89a;
-    }
-
-    .card {
-      background: white;
-      padding: 2rem 2.5rem;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       text-align: center;
-      display: none;
-      animation: fadeIn 1s forwards;
-      max-width: 90%;
+      height: 100vh;
+      margin: 0;
     }
-
     h1 {
-      font-size: 1.8rem;
-      color: #2e8b57;
-      margin-bottom: 0.7rem;
-    }
-
-    p {
-      font-size: 1.1rem;
+      font-size: 4rem;
+      margin-bottom: 10px;
       color: #444;
     }
-
-    .flower {
-      position: absolute;
-      top: -50px;
-      font-size: 24px;
-      animation: fall linear infinite;
-      opacity: 0;
-      pointer-events: none;
+    p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: 0 20px;
+      color: #666;
     }
-
-    @keyframes fall {
-      0% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(110vh);
-        opacity: 0;
-      }
+    .code {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      color: #999;
     }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
+    .line {
+      width: 60px;
+      height: 2px;
+      background-color: #ccc;
+      margin: 20px 0;
     }
   </style>
 </head>
 <body>
-
-  <button id="startBtn">Bas</button>
-
-  <div class="card" id="messageCard">
-    <h1>Geçmiş Olsun Kankam!</h1>
-    <p>En Kısa Sürede Senle Taşkınlık Yapmaya Geri Döneriz<br/>
-    Ben Her Zaman Yanındayım Unutma, Ecrin! SUTGIBI Bir Markadır.</p>
-  </div>
-
-  <script>
-    const btn = document.getElementById('startBtn');
-    const card = document.getElementById('messageCard');
-
-    btn.addEventListener('click', () => {
-      btn.style.display = 'none';
-      card.style.display = 'block';
-      startFlowerRain();
-    });
-
-    function startFlowerRain() {
-      setInterval(() => {
-        const flower = document.createElement("div");
-        flower.classList.add("flower");
-        flower.innerText = "🌸";
-        flower.style.left = Math.random() * 100 + "vw";
-        flower.style.fontSize = (Math.random() * 20 + 20) + "px";
-        flower.style.animationDuration = (Math.random() * 2 + 4) + "s";
-        document.body.appendChild(flower);
-
-        setTimeout(() => {
-          flower.remove();
-        }, 7000);
-      }, 300);
-    }
-  </script>
+  <h1>404</h1>
+  <div class="line"></div>
+  <p><strong>Your friend could not be found.</strong></p>
+  <p class="code">Error Code: FNF_0404</p>
 </body>
 </html>
